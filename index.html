@@ -24,7 +24,8 @@
   <main id="top">
     <section class="hero">
       <div class="container hero-grid">
-        <div>
+        <div class="hero-copy-wrap">
+          <div class="availability-badge">✦ Currently seeking remote Microsoft 365 opportunities</div>
           <p class="eyebrow">Microsoft 365 • Cloud Administration • IT Support</p>
           <h1>Hi, I’m <span>Shanza Salman.</span></h1>
           <p class="hero-copy">I’m a Microsoft 365 Administrator with hands-on experience supporting cloud environments across identity, messaging, collaboration, endpoint management, security, and user support.</p>
@@ -37,16 +38,23 @@
             <span>Open to remote opportunities</span>
           </div>
         </div>
-        <aside class="hero-card">
-          <p class="card-label">Technical Focus</p>
-          <h2>Microsoft 365 Administration</h2>
-          <div class="focus-list">
-            <div><strong>Identity</strong><span>Entra ID, Active Directory, MFA, Conditional Access</span></div>
-            <div><strong>Messaging</strong><span>Exchange Online, mail flow, shared mailboxes</span></div>
-            <div><strong>Security</strong><span>Defender, Intune, Purview</span></div>
-            <div><strong>Automation</strong><span>PowerShell, Microsoft Graph</span></div>
+
+        <div class="hero-side">
+          <div class="photo-frame">
+            <img id="profile-photo" alt="Professional portrait of Shanza Salman" />
+            <div class="photo-accent">✦</div>
           </div>
-        </aside>
+          <aside class="hero-card">
+            <p class="card-label">Technical Focus</p>
+            <h2>Microsoft 365 Administration</h2>
+            <div class="focus-list">
+              <div><strong>◈ Identity</strong><span>Entra ID, Active Directory, MFA, Conditional Access</span></div>
+              <div><strong>✉ Messaging</strong><span>Exchange Online, mail flow, shared mailboxes</span></div>
+              <div><strong>⌁ Security</strong><span>Defender, Intune, Purview</span></div>
+              <div><strong>⌘ Automation</strong><span>PowerShell, Microsoft Graph</span></div>
+            </div>
+          </aside>
+        </div>
       </div>
     </section>
 
@@ -54,24 +62,27 @@
       <div class="container two-column">
         <div>
           <p class="section-kicker">About Me</p>
-          <h2>I like solving the admin problems that keep people from getting work done.</h2>
+          <h2>A little about me beyond the admin center.</h2>
         </div>
         <div class="body-copy">
-          <p>My background includes Microsoft 365 administration, enterprise user support, account provisioning, licensing, permissions, messaging, collaboration tools, endpoint support, and technical documentation.</p>
-          <p>I especially enjoy troubleshooting Microsoft 365 environments, working with identity and access management, and using PowerShell or Microsoft Graph to make repetitive administrative work more efficient.</p>
+          <p>I’m someone who genuinely likes figuring things out. Whether I’m troubleshooting a technical issue, organizing a messy process, or learning a new platform, I tend to enjoy the part where everything finally clicks.</p>
+          <p>I’m also studying Public Health at the University of North Texas, so I spend a lot of my time balancing a people-focused degree with a very technical career path. I like that contrast. It has made me more patient, adaptable, and aware of how technology actually affects the people using it.</p>
+          <p>Outside of the technical side, I enjoy creative projects, clean design, and making things feel polished and intentional. That same attention to detail tends to show up in the way I approach documentation, troubleshooting, and user support.</p>
         </div>
       </div>
     </section>
 
     <section id="skills" class="section alt-section">
       <div class="container">
-        <p class="section-kicker">Technical Skills</p>
-        <h2>Tools and platforms I work with</h2>
+        <div class="section-heading-row">
+          <div><p class="section-kicker">Technical Skills</p><h2>Tools and platforms I work with</h2></div>
+          <div class="mini-sparkles">✦ ･ﾟ ✧</div>
+        </div>
         <div class="skills-grid">
-          <article class="skill-card"><h3>Microsoft 365</h3><p>Exchange Online, Microsoft Teams, SharePoint Online, OneDrive, Microsoft 365 administration</p></article>
-          <article class="skill-card"><h3>Identity & Access</h3><p>Entra ID, Active Directory, Azure AD Connect, MFA, Conditional Access, Group Policy</p></article>
-          <article class="skill-card"><h3>Security & Endpoint</h3><p>Microsoft Defender, Intune, Microsoft Purview, Windows Server, endpoint support</p></article>
-          <article class="skill-card"><h3>Automation & Admin</h3><p>PowerShell, Microsoft Graph, licensing, billing configuration, ServiceNow, Jira</p></article>
+          <article class="skill-card"><div class="skill-icon">☁</div><h3>Microsoft 365</h3><p>Exchange Online, Microsoft Teams, SharePoint Online, OneDrive, Microsoft 365 administration</p></article>
+          <article class="skill-card"><div class="skill-icon">◇</div><h3>Identity & Access</h3><p>Entra ID, Active Directory, Azure AD Connect, MFA, Conditional Access, Group Policy</p></article>
+          <article class="skill-card"><div class="skill-icon">⌁</div><h3>Security & Endpoint</h3><p>Microsoft Defender, Intune, Microsoft Purview, Windows Server, endpoint support</p></article>
+          <article class="skill-card"><div class="skill-icon">⌘</div><h3>Automation & Admin</h3><p>PowerShell, Microsoft Graph, licensing, billing configuration, ServiceNow, Jira</p></article>
         </div>
       </div>
     </section>
@@ -126,5 +137,13 @@
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
+
+  <script>
+    fetch('assets/profile-base64.txt')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('profile-photo').src = 'data:image/jpeg;base64,' + data.trim();
+      });
+  </script>
 </body>
 </html>
