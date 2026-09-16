@@ -41,7 +41,7 @@
 
         <div class="hero-side">
           <div class="photo-frame">
-            <img id="profile-photo" alt="Professional portrait of Shanza Salman" />
+            <img src="assets/profile.jpg?v=1" alt="Professional portrait of Shanza Salman" />
             <div class="photo-accent">✦</div>
           </div>
           <aside class="hero-card">
@@ -137,19 +137,5 @@
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
-
-  <script>
-    fetch('assets/profile-base64.txt?v=3')
-      .then(function(response) {
-        if (!response.ok) throw new Error('Profile image failed to load');
-        return response.text();
-      })
-      .then(function(data) {
-        document.getElementById('profile-photo').src = 'data:image/jpeg;base64,' + data.trim();
-      })
-      .catch(function() {
-        document.querySelector('.photo-frame').classList.add('photo-fallback');
-      });
-  </script>
 </body>
 </html>
